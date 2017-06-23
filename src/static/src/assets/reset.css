@@ -1,0 +1,37 @@
+body,h1,h2,h3,h4,h5,h6,blockquote,p,pre,
+dl,dd,menu,ol,ul,
+caption,th,td,
+form,fieldset,legend,input,button,textarea{margin:0;padding:0}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+menu,ol,ul{list-style:none}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0;vertical-align:middle}
+address,cite,dfn,em,var{font-style:normal}
+code,kbd,pre,samp{font-family:'courier new',courier,monospace}
+input,button,textarea,select{font-size:100%;outline:none}
+abbr[title]{border-bottom:1px dotted;cursor:help}
+a{text-decoration:none;outline:none}
+body,input,button,textarea,select,option,optgroup{font:12px/1.5 STHeiti,'Microsoft YaHei',arial,tahoma,\5b8b\4f53,sans-serif;}
+/*通用*/
+.clearfix{*zoom:1;}
+.clearfix:after{display:block;content:"clear";height:0;clear:both;overflow:hidden;visibility:hidden;}
+.dis-ib{ display: inline-block; vertical-align: middle; *display: inline; *zoom: 1; *vertical-align:auto;}
+.hidden{ display: none;}
+.fl{float: left;}
+.fr{float: right;}
+.hide {display: none;}
+.wp100{width: 100%}
+/* 文字颜色+文字大小+超链接+背景颜色*/
+.red { color:#fb4d4c !important;}
+.green { color:#1abc9d !important;}
+.blue { color: #10AEFF !important;}
+.black{color: #4D4D4D !important;}
+.gray{color:#999999 !important;}
+.white{color:#fff !important;}
+.orange{color:#f5a623 !important;}
+
+/*边框*/
+.bT{border-top:1px solid #eaeaea;}
+.bB{border-bottom:1px solid #eaeaea;}
+.bL{border-left:1px solid #eaeaea;}
+.bR{border-right:1px solid #eaeaea;}
