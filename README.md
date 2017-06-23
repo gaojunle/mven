@@ -16,6 +16,7 @@
     npm run dev
 ```
 后台默认启动端口3000
+
 2. 进入src/static目录，同样运行：
 ```
     npm run dev
