@@ -3,7 +3,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var db = require('../db/DB');
 
-var SMS = require('alidayu-node');
+var SMS = require('../cpt/sms');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -38,24 +38,6 @@ router.get('/api/user', (req, res) => {
 });
 
 router.post('/api/smscode', (req, res) => {
-    var SMS = require('aliyun-sms-node');
-
-    var sms = new SMS({
-        AccessKeyId: 'LTAI1GKMtI70AWNk',
-        AccessKeySecret: '6ekjP36h44MLqTzfxF1ZXh8dy7wlPB'
-    });
-
-    sms.send({
-        Action: 'SingleSendSms',
-        Format: 'JSON',
-        ParamString: JSON.stringify({name: 'test', text: 1233, time: '15分钟'}),
-        RecNum: '13716732040',
-        SignName: '积赏科技',
-        TemplateCode: 'SMS_72855005',
-    }, function () {
-        console.log(123233)
-        res.send({msg: 1233})
-    }) //返回Promise
-
+    //SMS.sendRegistSms();
 });
 module.exports = router;

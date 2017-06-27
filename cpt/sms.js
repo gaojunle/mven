@@ -93,8 +93,3 @@ var AliyunSmsUtil = {
 };
 
 module.exports = AliyunSmsUtil;
-
-// 运行该阿里云短信发送函数之前，请做如下修改：
-// 1. 请先修改 config 中的4个参数： AccessKeyId， AccessKeySecret，SignName，TemplateCode
-// 2. 参考阿里云短信模板， 修改 _sendMessage 函数中的 ParamString
-AliyunSmsUtil.test();
