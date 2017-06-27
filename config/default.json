@@ -1,0 +1,16 @@
+{
+  "dev_db_conf": {
+    "db_user": "",
+    "db_pwd": "",
+    "db_host": "localhost",
+    "db_port": 27017,
+    "db_name": "mydb"
+  },
+  "pro_db_conf": {
+    "db_user": "",
+    "db_pwd": "",
+    "db_host": "localhost",
+    "db_port": 27017,
+    "db_name": "mydb"
+  }
+}

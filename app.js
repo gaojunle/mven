@@ -22,8 +22,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));    //静态文件目录，可添加多个
 app.use('/static', express.static(path.join(__dirname, 'static')));    //静态文件目录,这里使用vue的单页面应用；
 
+var config = require('config');
+config.db = require('./cpt/db/mongodb')
+global.config = config;
 //数据库
-var DB = require('./db/mongodb');
+//config.set('db', require('./cpt/db/mongodb'));
 //路由
 app.use('/', require('./routes/index'));
 

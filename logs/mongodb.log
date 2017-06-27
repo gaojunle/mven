@@ -1,0 +1,26 @@
+/**
+ * Created by gaojun-pd on 2017/6/27.
+ */
+[2017-06-27 17:56:11.903] [INFO] mongodb - [32m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [E:\mworkspace\NodeJS\mven\logs\mongodb.log] [9432] [39mtest1
+[2017-06-27 17:56:11.908] [WARN] mongodb - [33m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [E:\mworkspace\NodeJS\mven\logs\mongodb.log] [9432] [39mtest2
+[2017-06-27 17:56:11.908] [ERROR] mongodb - [31m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [E:\mworkspace\NodeJS\mven\logs\mongodb.log] [9432] [39mtest3
+[2017-06-27 17:56:11.935] [INFO] mongodb - [32m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [E:\mworkspace\NodeJS\mven\logs\mongodb.log] [9432] [39mDatabase connection success
+[2017-06-27 17:59:51.031] [INFO] mongodb - [32m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [] [6336] [39mtest1
+[2017-06-27 17:59:51.034] [WARN] mongodb - [33m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [] [6336] [39mtest2
+[2017-06-27 17:59:51.034] [ERROR] mongodb - [31m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [] [6336] [39mtest3
+[2017-06-27 17:59:51.059] [INFO] mongodb - [32m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [] [6336] [39mDatabase connection success
+[2017-06-27 18:00:14.240] [INFO] mongodb - [32m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [  ] [10836] [39mtest1
+[2017-06-27 18:00:14.247] [WARN] mongodb - [33m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [  ] [10836] [39mtest2
+[2017-06-27 18:00:14.249] [ERROR] mongodb - [31m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [  ] [10836] [39mtest3
+[2017-06-27 18:00:14.295] [INFO] mongodb - [32m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [  ] [10836] [39mDatabase connection success
+[2017-06-27 18:05:01.161] [INFO] mongodb - [32m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [  ] [8844] [39mtest1
+[2017-06-27 18:05:01.199] [INFO] mongodb - [32m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [  ] [8844] [39mDatabase connection success
+[2017-06-27 18:05:16.315] [INFO] mongodb - [32m[  ] [9584] [39mDatabase connection success
+[2017-06-27 18:05:34.352] [INFO] mongodb - [32m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [  ] [9428] [39mDatabase connection success
+[2017-06-27 18:05:57.283] [INFO] mongodb - [32m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [  ] [11088] [39m Database connection success
+[2017-06-27 18:34:54.389] [INFO] mongodb - [32m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [  ] [9476] [39m Database connection success
+[2017-06-27 18:35:52.097] [INFO] mongodb - [32m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [  ] [10864] [39m Database connection success
+[2017-06-27 18:36:10.317] [INFO] mongodb - [32m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [  ] [8256] [39m Database connection success
+[2017-06-27 18:38:17.526] [INFO] mongodb - [32m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [  ] [7848] [39m Database connection success
+[2017-06-27 18:38:51.170] [INFO] mongodb - [32m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [  ] [10696] [39m Database connection success
+[2017-06-27 19:08:10.102] [INFO] mongodb - [32m\mworkspace\NodeJS\mven\cpt\db\mongodb.js: [  ] [8068] [39m Database connection success

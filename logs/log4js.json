@@ -1,0 +1,23 @@
+{
+  "appenders": [
+    {
+      "type": "console"
+    },
+    {
+      "type": "file",
+      "filename": "./logs/mongodb.log",
+      "maxLogSize": 1048576,
+      "layout": {
+        "type": "basic"
+      },
+      "backups": 5,
+      "category": "mongodb"
+    }
+  ],
+  "levels": {
+    "rpc-log": "ERROR",
+    "forward-log": "ERROR"
+  },
+  "replaceConsole": true,
+  "lineDebug": true
+}

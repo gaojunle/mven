@@ -33,7 +33,7 @@ var AliyunSmsUtil = {
         var param = Object.assign(data, this.config);
         delete param.AccessKeySecret
         param.Signature = this._signParameters(param, this.config.AccessKeySecret);
-        console.log(param)
+        //console.log(param)
         request.post({
             url: 'http://dysmsapi.aliyuncs.com/',
             headers: {
