@@ -11,7 +11,6 @@ var dbConfig = process.env.NODE_ENV == 'production' ? config.get('pro_db_conf') 
 var dbURL = "mongodb://" + dbConfig.db_user + ":" + dbConfig.db_pwd + "@" + dbConfig.db_host + ":" + dbConfig.db_port + "/" + dbConfig.db_name;
 mongoose.connect(dbURL);
 
-
 process.env.LOGGER_LINE = true;
 
 mongoose.connection.on('connected', function (err) {

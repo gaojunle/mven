@@ -3,7 +3,8 @@
  */
 var fs = require('fs');
 var path = require('path');
-var mongoose = require('mongoose');
+var mongoose = require('./conn-mongodb');
+mongoose.Promise = Promise;
 
 var DB = function () {
     this.mongoClient = {};
@@ -47,7 +48,6 @@ DB.prototype.save = function (table_name, fields, callback) {
         if (callback) callback({msg: 'Field is not allowed for null'});
         return false;
     }
-
     var err_num = 0;
     for (var i in fields) {
         if (!this.tabConf[table_name][i]) err_num++;
