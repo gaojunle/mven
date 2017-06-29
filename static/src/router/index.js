@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import UserLogin from '@/components/UserLogin'
 import UserRegist from '@/components/UserRegist'
 import UserForgetPwd from '@/components/UserForgetPwd'
+import Main from '@/components/Main'
 Vue.use(Router)
 
 export default new Router({
@@ -11,6 +12,7 @@ export default new Router({
     {
       path: '/',
       name: 'main',
+      component: Main,
       meta: {requiresAuth: true}
     },
     {

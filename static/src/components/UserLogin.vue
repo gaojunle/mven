@@ -29,7 +29,7 @@
         logining: false,
         ruleForm: {
           uname: 'admin',
-          password: '12345'
+          password: '123456'
         },
         rules2: {
           uname: [
@@ -75,7 +75,6 @@
             this.$http.post('/api/user/login', loginParams).then((response) => {
               //console.log(this.$route,this.$router);
               if (response.body.errno == 0) {
-                console.log(decodeURIComponent(this.$route.query.redirect))
                 this.$router.push({path: decodeURIComponent(this.$route.query.redirect)});
               }
               this.logining = false;

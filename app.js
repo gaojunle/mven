@@ -28,7 +28,12 @@ config.db = require('./cpt/db/DB')
 global.config = config;
 
 //路由
-app.use('/', require('./routes/index'));
+app.all('*', (req, res, next) => {
+    console.log('we are handling cookies');
+    next();
+})
+app.use(require('./routes/index'));
+app.use(require('./routes/user'));
 
 // catch 404 and forward to error handler。404处理
 app.use(function (req, res, next) {

@@ -5,12 +5,14 @@
     <title>{{title}}</title>
 </head>
 <body>
-<h2>主页，需要登录后能进入</h2>
-<p><a href="#" class="js-logout">退出</a></p>
+<h2>测试static目录</h2>
+<a href="#" class="js-login">登录</a>
+<a href="#">注册</a>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script>
-    $('.js-logout').click(function () {
-        $.post('/api/user/logout', {}, function (retData) {
+    $('.js-login').click(function () {
+        $.post('/api/user/login', {username: 'admin', password: '123456'}, function (retData) {
+            console.log(retData)
             if (retData.errno == 0) {
                 location.href = '/'
             }
