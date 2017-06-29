@@ -13,7 +13,7 @@ var crypto = require('crypto');
 var AliyunSmsUtil = {
     config: {
         AccessKeyId: 'LTAI1GKMtI70AWNk',
-        AccessKeySecret: "UsK5eV00SuNWZgkO3pvRa161dp0Jv5",         //阿里短信服务所用的密钥值
+        AccessKeySecret: "***",         //阿里短信服务所用的密钥值
         Format: 'JSON',
         SignatureMethod: 'HMAC-SHA1',
         SignatureVersion: '1.0',
