@@ -10,7 +10,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/(main)?',
       name: 'main',
       component: Main,
       meta: {requiresAuth: true}

@@ -3,18 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>{{title}}</title>
+    <link rel="stylesheet" href="../static/node_modules/element-ui/lib/theme-default/index.css">
+    <style>
+        .login-container {
+            /*box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);*/
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            background-clip: padding-box;
+            margin: 180px auto;
+            width: 350px;
+            padding: 35px 35px 15px 35px;
+            background: #fff;
+            border: 1px solid #eaeaea;
+            box-shadow: 0 0 25px #cac6c6;
+        }
+
+        .title {
+            margin: 0px auto 40px auto;
+            text-align: center;
+            color: #505458;
+        }
+
+        .remember {
+            margin: 0px 0px 35px 0px;
+        }
+    </style>
 </head>
 <body>
-<h2>测试static目录</h2>
-<a href="#" class="js-login">登录</a>
-<a href="#">注册</a>
+<div class="el-form demo-ruleForm login-container el-form--label-left"><h3 class="title">系统登录</h3>
+    <div class="el-form-item is-required">
+        <div class="el-form-item__content" style="margin-left: 0px;">
+            <div class="el-input"><input value="admin" class="el-input__inner"></div>
+        </div>
+    </div>
+    <div class="el-form-item is-required">
+        <div class="el-form-item__content" style="margin-left: 0px;">
+            <div class="el-input">
+                <input autocomplete="off" placeholder="密码" type="password" rows="2" value="123456"
+                       validateevent="true" class="el-input__inner">
+            </div>
+        </div>
+    </div>
+    <div class="el-form-item" style="width: 100%;">
+        <div class="el-form-item__content" style="margin-left: 0px;">
+            <button type="button" class="el-button el-button--primary js-login" style="width: 100%;">
+                <span>用户登录</span>
+            </button>
+        </div>
+    </div>
+</div>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script>
     $('.js-login').click(function () {
         $.post('/api/user/login', {username: 'admin', password: '123456'}, function (retData) {
-            console.log(retData)
             if (retData.errno == 0) {
-                location.href = '/'
+                location.href = '/main'
             }
         });
         return false;

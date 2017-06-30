@@ -15,7 +15,7 @@
     <el-checkbox v-model="checked" class="remember" style="margin-bottom: 10px">记住密码</el-checkbox>
     <el-form-item>
       <el-row type="flex" class="row-bg" justify="space-between">
-        <router-link to="forgetpwd">用户注册</router-link>
+        <router-link to="userRegist">用户注册</router-link>
         <router-link to="forgetpwd" class="">忘记密码</router-link>
       </el-row>
     </el-form-item>
@@ -75,7 +75,7 @@
             this.$http.post('/api/user/login', loginParams).then((response) => {
               //console.log(this.$route,this.$router);
               if (response.body.errno == 0) {
-                this.$router.push({path: decodeURIComponent(this.$route.query.redirect)});
+                this.$router.push({path: this.$route.query.redirect || '/'});
               }
               this.logining = false;
             }, (err) => {

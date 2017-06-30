@@ -33,7 +33,7 @@ module.exports = {
         target: 'http://localhost:3000',
         cookieDomainRewrite: '*',
         headers: {
-          Cookie: 'connect.sid=s%3AAwi1mGgzs1uQSYHgVzi2Sbt6xSe4kCc8.f60Q3NmG%2FBwWdvaPX6KA2m%2BLTVmkPyqAxLCFYBFfCSM',
+          Cookie: 'u_token=59561b1f0ce58027f0c9e427; connect.sid=s%3ANkT8pijTnACGAALizXNJOdhEV4jmvkBe.spOPuSKFoLSzB2ZIne8hMXLL3CLmHXmFaSFOVACIIaE',
           Referer: 'http://localhost:3000'
         },
         changeOrigin: true

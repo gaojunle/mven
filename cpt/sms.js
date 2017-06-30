@@ -74,16 +74,19 @@ var AliyunSmsUtil = {
     },
 
     //发送注册短信[业务级]
-    sendRegistSms: function () {
+    sendRegistSms: function (opt) {
         var data = {
-            PhoneNumbers: '13716732040',
+            PhoneNumbers: opt.mobile || '13716732040',
             SignName: '积赏科技',
             TemplateCode: 'SMS_72855005',
             TemplateParam: "{\"name\":\"用户A\",\"text\":\"3421\",\"time\":\"30\"}",
             OutId: '1234'//可选
         };
         this._sendMessage(data, function (err, response, data) {
-            console.log(err, data);
+            if (opt.callback) {
+                opt.callback(JSON.parse(data));
+            }
+            console.log(err, JSON.parse(data));
         })
     },
     //发送用户修改密码短信[业务级]
