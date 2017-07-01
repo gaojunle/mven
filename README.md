@@ -15,20 +15,35 @@
 - vue前端框架
 
 ## 2、使用说明
-1. 进入src目录，运行：
+1. 克隆本项目 git clone https://github.com/gaojunle/mven.git
+2. 全局安装supervisor npm install supervisor -g
+3. 安装后台相关模块，进入mven目录，执行：
 ```
-    npm run dev
+    npm install
 ```
-后台默认启动端口3000
+4. 安装前端相关模块，进入mven/static目录，执行：
+```
+    npm install
+```
+由于本项目vue组件css是基于scss预编译器，因此安装过程中可能出现：phantomjs not found on path 卡住 解决方案[请参考](https://segmentfault.com/a/1190000008996214)
+解决完成后，再次npm install
+如果仍有错误，可能是sass-node模块安装失败，重新安装后即可；
 
-2. 进入src/static目录，同样运行：
+5. 启动后台，进入mven目录，运行：
 ```
     npm run dev
 ```
+后台默认启动端口3000，访问：http://localhost:3000
+
+6. 启动后台，进入mven/static目录，同样运行：
+```
+    npm run dev
+```
+后台默认启动端口8080，访问：http://localhost:8080
 ### 后台框架说明
 1. web应用Express框架，使用supervisor启动，可以实现所监视目录内指定文件（默认.js，可配置其它 文件)发生变化时，自动重启服务器，实时更新
-> - npm install supervisor --save 
-> - /package.json文件的scripts值，添加 "dev": "supervisor ./bin/www" 
+> - npm install supervisor --save
+> - /package.json文件的scripts值，添加 "dev": "supervisor ./bin/www"
 > - 配置"build" 添加生产环境变量production,可通过process.env.NODE_ENV来得到值，进而控制对应操作(例如：/cpt/db/conn-mongodb.js根据不同环境变量值，选择连接数据库参数)；
 > - 控制台通过npm run dev来启动，实时更新js文件（注意：新添加js文件不会自动识别，需要重启）
 
@@ -46,7 +61,7 @@
     采用pomelo-logger日志模块，它是基于log4js的封装，可将日志内容输出到控制台和日志文件中
 > - npm install pomelo-logger --save
 > - 配置日志输出到文件/logs/log4js.json，其中type:file即输出到文件，通过category来识别配置，而level是配置不同输出级别，[请参考博客](http://blog.csdn.net/youbl/article/details/32708609)
-> - pomelo-logger文档中指出，修改log4js模块下log4js.json即可生效，但通过试验直接修改node_modules下log4js/log4js.json不生效，因此修改一下pomelo-logger中源码 
+> - pomelo-logger文档中指出，修改log4js模块下log4js.json即可生效，但通过试验直接修改node_modules下log4js/log4js.json不生效，因此修改一下pomelo-logger中源码
 
 ==特别注意：== node_modules/pomelo-logger/lib/logger.js
 ```
@@ -59,18 +74,18 @@ function getLogger(categoryName) {
 > - 示例：在/cpt/db/conn-mongodb.js中有对应日志使用；
 
 4. 模板引擎
-    
+
     使用hbs(handlebars)做为视图引擎，指定视图目录views，处理扩展名为html模板文件
 
-> - npm install hbs --save 
+> - npm install hbs --save
 > - 在app.js中配置，并指定模板引擎要读取的目录及文件后缀即可；
 > - 本项目放在views目录，使用html作为后缀，方便IDE工具识别
 
 5. session管理
 
     页面访问是基于http协议，而http是无状态协议，即请求完就结束，不会告诉服务器当前用户是谁，因此如何保持用户在同一站点页面间跳转，还能让服务器识别，这就是session（会话）作用，关于session的理解，[请查看](http://www.2cto.com/kf/201206/135471.html)
-    
-    本项目中使用express-session模块，可以自动保存session到数据，并与req请求对象结合，获取或设置session；
+
+    本项目中使用express-session模块，可以自动保存session到数据，并与req请求对象结合，获取或设置session；[参考文档](http://www.jianshu.com/p/5a0ccd1ee27e)
     
 > - npm install express-session --save
 > - 在/routes/index.js中有关于session管理的示例，基本就是引入模块及cookie-parser模块，然后挂载到router上；
